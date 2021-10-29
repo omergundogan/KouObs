@@ -23,9 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="DuplicateIds"
             tools:layout_editor_absoluteY="466dp" />
-        <Button
-            android:layout_width=""
-            android:layout_height=""
+
 
         <EditText
             android:id="@+id/emailsignup"
