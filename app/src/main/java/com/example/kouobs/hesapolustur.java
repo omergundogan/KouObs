@@ -37,6 +37,7 @@ public class hesapolustur extends AppCompatActivity {
         EditText dogum = (EditText) findViewById(R.id.dogumtarihi);
 
 
+        //arif enemes
 
 
 }
