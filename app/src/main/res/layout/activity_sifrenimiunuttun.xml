@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greenbackground"
+    tools:context=".sifrenimiunuttun">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="147dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Şifreni mi unttun?"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="290dp"
+        android:layout_height="509dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-176dp"
+        android:layout_marginEnd="-80dp"
+        app:srcCompat="@drawable/topright" />
+
+    <EditText
+        android:id="@+id/emailsignup"
+        android:layout_width="350dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="373dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:ems="10"
+        android:hint="E-posta"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:translationZ="1dp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="192dp"
+        android:backgroundTint="@color/light_blue_600"
+        android:text="Sıfırla" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-97dp"
+        android:layout_marginTop="461dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="-100dp"
+        app:srcCompat="@drawable/path2491" />
+
+    <TextView
+        android:id="@+id/sifrenimiunuttun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="257dp"
+        android:layout_marginEnd="16dp"
+        android:text="Şifreni yenileyebilmemiz için aşağıda bulunan kutucuğua e-posta adresinizi gir, gelen e-posta'daki sıfırlama bağtantısısna tıkla."
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/aftertext"
+        android:layout_width="252dp"
+        android:layout_height="68dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="378dp"
+        android:layout_marginEnd="80dp"
+        android:text="Bağtantı e-postana gönderildi. \n Lütfen e-postanı kontrol et"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="304dp" />
+</RelativeLayout>
