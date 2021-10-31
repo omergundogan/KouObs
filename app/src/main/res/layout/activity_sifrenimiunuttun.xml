@@ -35,7 +35,7 @@
     <EditText
         android:id="@+id/emailsignup"
         android:layout_width="350dp"
-        android:layout_height="52dp"
+        android:layout_height="54dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -49,6 +49,7 @@
         android:paddingLeft="20dp"
         android:translationZ="1dp" />
 
+
     <Button
         android:id="@+id/reset"
         android:layout_width="320dp"
@@ -57,7 +58,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="192dp"
         android:backgroundTint="@color/light_blue_600"
