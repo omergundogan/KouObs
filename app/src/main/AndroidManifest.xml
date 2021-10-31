@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kouobs">
 
     <application
@@ -10,9 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KouOBS">
         <activity
+            android:name=".yataygecis"
+            android:exported="true" />
+        <activity
             android:name=".hesapolustur"
             android:label="@string/title_activity_hesapolustur"
-            android:theme="@style/Theme.KouOBS.NoActionBar"></activity>
+            android:theme="@style/Theme.KouOBS.NoActionBar" />
         <activity android:name=".sifrenimiunuttun" />
         <activity
             android:name=".ui.login.LoginActivity"

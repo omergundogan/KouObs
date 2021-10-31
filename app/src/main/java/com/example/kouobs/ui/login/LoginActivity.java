@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.kouobs.R;
 import com.example.kouobs.hesapolustur;
 import com.example.kouobs.sifrenimiunuttun;
+import com.example.kouobs.yataygecis;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -134,6 +135,9 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+
+                Intent intent = new Intent(LoginActivity.this, yataygecis.class);
+                startActivity(intent);
             }
         });
     }
