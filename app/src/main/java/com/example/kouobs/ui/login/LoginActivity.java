@@ -23,9 +23,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kouobs.AnaSayfa;
 import com.example.kouobs.R;
 import com.example.kouobs.hesapolustur;
-import com.example.kouobs.pdfactivity;
 import com.example.kouobs.sifrenimiunuttun;
 
 public class LoginActivity extends AppCompatActivity {
@@ -132,13 +132,17 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
+              /*  loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
 
-                Intent intent = new Intent(LoginActivity.this, pdfactivity.class);
+               */
+
+                Intent intent = new Intent (LoginActivity.this, AnaSayfa.class);
                 startActivity(intent);
-                //oldu
+
+
+
             }
         });
     }
