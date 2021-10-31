@@ -16,7 +16,7 @@ public class dikeygecis extends AppCompatActivity {
 
         WebView webView = (WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("");
+        webView.loadUrl("https://drive.google.com/drive/folders/179x3H_nE_93eqKyP_ibmveEkfnolmdJv");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
