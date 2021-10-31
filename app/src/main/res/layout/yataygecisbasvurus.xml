@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/greenbackground"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".yataygecis">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/yatay" />
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,6 +44,15 @@
         android:layout_marginTop="190dp"
         android:text="Merkezi Puanla "></Button>
 
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/idPDFView"
+        android:layout_width="266dp"
+        android:layout_height="477dp" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
 </RelativeLayout>
-

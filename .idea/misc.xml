@@ -3,14 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/layout/activity_dikeygecis.xml" value="0.159375" />
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/layout/activity_hesapolustur.xml" value="0.22" />
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/layout/activity_sifrenimiunuttun.xml" value="0.25" />
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/layout/content_scrolling.xml" value="0.2" />
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/layout/yataygecisbasvurus.xml" value="0.25" />
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/menu/menu_hesapolustur.xml" value="0.22" />
-        <entry key="..\:/Users/Genius/Desktop/kouobstest-main/app/src/main/res/menu/menu_scrolling.xml" value="0.11770833333333333" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout-w1240dp/activity_yataygecis.xml" value="0.1" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout-w1240dp/app_bar_yataygecis.xml" value="0.1" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout-w600dp/activity_yataygecis.xml" value="0.12432432432432433" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/activity_hesapolustur.xml" value="0.2421875" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/activity_login.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/activity_pdfactivity.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/activity_pdfview.xml" value="0.228125" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/activity_sifrenimiunuttun.xml" value="0.1" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/activity_yataygecis.xml" value="0.144" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/app_bar_yataygecis.xml" value="0.1" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/content_scrolling.xml" value="0.2421875" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/content_yataygecis.xml" value="0.1" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/fragment_reflow.xml" value="0.121875" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/fragment_settings.xml" value="0.121875" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/fragment_slideshow.xml" value="0.121875" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/nav_header_yataygecis.xml" value="0.2421875" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/layout/yataygecisbasvurus.xml" value="0.264" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/menu/menu_hesapolustur.xml" value="0.2" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/osman/AndroidStudioProjects/kouobstest-main/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.13802083333333334" />
       </map>
     </option>
   </component>

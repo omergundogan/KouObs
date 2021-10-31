@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.example.kouobs.R;
 import com.example.kouobs.hesapolustur;
+import com.example.kouobs.pdfactivity;
 import com.example.kouobs.sifrenimiunuttun;
 
 public class LoginActivity extends AppCompatActivity {
@@ -76,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-                // giriş durumu kontolleri ve hataları
+
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
@@ -134,6 +135,10 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+
+                Intent intent = new Intent(LoginActivity.this, pdfactivity.class);
+                startActivity(intent);
+                //oldu
             }
         });
     }
