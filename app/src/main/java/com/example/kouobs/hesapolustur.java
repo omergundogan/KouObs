@@ -81,7 +81,7 @@ public class hesapolustur extends AppCompatActivity {
 
                 Log.d("eposta", eposta);
                 Log.d("password", password);
-              //  kullaniciolustur(eposta,password);
+                kullaniciolustur(eposta,password);
             }
         });
 
@@ -109,7 +109,7 @@ public class hesapolustur extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("girisdurumu", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(hesapolustur.this, "Giriş Başarılı",
+                            Toast.makeText(hesapolustur.this, "Kayıt Başarılı",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(user);
                         } else {
