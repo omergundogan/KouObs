@@ -20,7 +20,7 @@
             android:exported="false" />
         <activity
             android:name=".hesapolustur"
-            android:label="@string/title_activity_hesapolustur"
+            android:label="arifr"
             android:theme="@style/Theme.KouOBS.NoActionBar" />
         <activity android:name=".sifrenimiunuttun" />
         <activity
