@@ -10,7 +10,7 @@
         android:id="@+id/pdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="pdf aç kanka"
+        android:text="pdf aç bruh"
         tools:layout_editor_absoluteX="210dp"
         tools:layout_editor_absoluteY="99dp" />
 </RelativeLayout>
