@@ -23,6 +23,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -48,6 +49,7 @@ public class hesapolustur extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseUser currentUser;
+    private boolean giris = false;
 
 
 
@@ -99,6 +101,7 @@ public class hesapolustur extends AppCompatActivity {
 
                 String eposta = email.getText().toString();
                 String password = sifre.getText().toString();
+                String passwordagain = sifreTekrar.getText().toString();
                 String ogrencino = ogrenciNo.getText().toString();
                 String ogrenciad = ogrenciAd.getText().toString();
                 String ogrencisoyad = ogrenciSoyad.getText().toString();
@@ -109,10 +112,25 @@ public class hesapolustur extends AppCompatActivity {
                 String bolum = bolumm.getText().toString();
 
 
+
+                //eğer kontroller başarılıysa
+                dogrulama( eposta, password, passwordagain,  ogrencino,  ogrenciad,
+                         ogrencisoyad, adres, telefonno, dogumtarihi,
+                         okul, bolum);
+                if(giris == true){
+
                 kullaniciolustur(eposta,password);
                 kullanicibilgileri( eposta,  password, ogrencino,  ogrenciad,
                          ogrencisoyad, adres, telefonno, dogumtarihi,
-                         okul, bolum);
+                         okul, bolum);}
+
+                else {
+                    Toast.makeText(hesapolustur.this, "Lütfen bilgilerinizi kontrol ediniz",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+
+
 
 
             }
@@ -149,8 +167,7 @@ public class hesapolustur extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("girisdurumu", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(hesapolustur.this, "Kayıt Başarısız",
-                                    Toast.LENGTH_SHORT).show();
+
                             updateUI(null);
                         }
                     }
@@ -204,6 +221,25 @@ public class hesapolustur extends AppCompatActivity {
                 });
 
 
+
+}
+
+private void dogrulama(String email,String sifre,String sifreTekrar, String ogrencino, String ogrenciad,
+                       String ogrencisoyad,String adres,String telefonNo,String dogumtarihi,
+                       String okul,String bolum){
+
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(sifre) && !TextUtils.isEmpty(sifreTekrar) &&
+                !TextUtils.isEmpty(ogrencino) && !TextUtils.isEmpty(ogrenciad) && !TextUtils.isEmpty(ogrencisoyad) &&
+                !TextUtils.isEmpty(adres) && !TextUtils.isEmpty(telefonNo) && !TextUtils.isEmpty(dogumtarihi) &&
+                !TextUtils.isEmpty(okul) && !TextUtils.isEmpty(bolum)  ){
+
+            if(sifre.equals(sifreTekrar)) giris = true;
+            else { Toast.makeText(hesapolustur.this, "Şifreler aynı değil",
+                    Toast.LENGTH_SHORT).show();}
+
+        }
+        else{ Toast.makeText(hesapolustur.this, "Lütfen bilgilerinizi kontrol ediniz",
+                Toast.LENGTH_SHORT).show();}
 
 }
 }
