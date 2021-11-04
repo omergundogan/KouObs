@@ -1,7 +1,9 @@
 package com.example.kouobs;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.kouobs.ui.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -70,8 +72,6 @@ public class hesapolustur extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
 
-
-        EditText dogum = (EditText) findViewById(R.id.dogumtarihi);
         EditText email = (EditText) findViewById(R.id.emailsignup);
         EditText sifre = (EditText) findViewById(R.id.signuppassword);
         EditText sifreTekrar = (EditText) findViewById(R.id.signuppasswordagain);
@@ -122,7 +122,16 @@ public class hesapolustur extends AppCompatActivity {
                 kullaniciolustur(eposta,password);
                 kullanicibilgileri( eposta,  password, ogrencino,  ogrenciad,
                          ogrencisoyad, adres, telefonno, dogumtarihi,
-                         okul, bolum);}
+                         okul, bolum);
+
+                //bütün işlemler tamamlandıktan sonra giriş ekranına gönder
+                    Intent intent = new Intent(hesapolustur.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+
+                }
+
+
 
                 else {
                     Toast.makeText(hesapolustur.this, "Lütfen bilgilerinizi kontrol ediniz",
@@ -163,6 +172,7 @@ public class hesapolustur extends AppCompatActivity {
                             Toast.makeText(hesapolustur.this, "Kayıt Başarılı",
                                     Toast.LENGTH_SHORT).show();
 
+
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -182,9 +192,6 @@ public class hesapolustur extends AppCompatActivity {
                                      String ogrencisoyad,String adres,String telefonNo,String dogumtarihi,
                                         String okul,String bolum){
 
-       // currentUser = firebaseAuth.getCurrentUser();
-        /*assert currentUser != null;
-        final String currentUserId = currentUser.getUid();*/
 
          FirebaseFirestore db = FirebaseFirestore.getInstance();
 
