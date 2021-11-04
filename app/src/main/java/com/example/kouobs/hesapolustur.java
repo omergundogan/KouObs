@@ -198,8 +198,13 @@ public class hesapolustur extends AppCompatActivity {
 
          CollectionReference collectionReference = db.collection("kullanicilar");
 
+       // currentUser = firebaseAuth.getCurrentUser();
+       // final String currentUserId = currentUser.getUid();
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
          Map<String, String> kullanici = new HashMap<>();
 
+         kullanici.put("userId", user.getUid().toString());
         kullanici.put("email", email);
         kullanici.put("sifre", sifre);
         kullanici.put("OgrenciNo", ogrencino);
