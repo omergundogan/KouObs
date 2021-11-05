@@ -38,7 +38,9 @@ public class AnaSayfa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ana_sayfa);
 
-        TextView uid = (TextView) findViewById(R.id.userid);
+        TextView ogno = (TextView) findViewById(R.id.ogno);
+        TextView ogad = (TextView) findViewById(R.id.ogad);
+        TextView ogsoyad = (TextView) findViewById(R.id.ogsoyad);
         Button pdf = (Button) findViewById(R.id.pdf);
 
         Bundle extras = getIntent().getExtras();
@@ -47,7 +49,7 @@ public class AnaSayfa extends AppCompatActivity {
             Log.d("getuserid",userid);
 
 
-        DocumentReference docRef = db.collection("kullanici").document(debtonoref);
+        DocumentReference docRef = db.collection("kullanicilarcollection").document("SF");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -55,6 +57,10 @@ public class AnaSayfa extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
                         Log.d("sorgula", "DocumentSnapshot data: " + document.getData());
+
+                        ogno.setText("Öğrenci Numarası: " + document.getString("OgrenciNo"));
+                        ogad.setText("Öğrenci Adı: " +document.getString("OgrenciAd"));
+                        ogsoyad.setText("Öğrenci Soyadı: " +document.getString("OgrenciSoyad"));
                     } else {
                         Log.d("sorgula", "No such document");
                     }
