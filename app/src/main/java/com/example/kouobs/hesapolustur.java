@@ -202,6 +202,7 @@ public class hesapolustur extends AppCompatActivity {
        // final String currentUserId = currentUser.getUid();
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        CollectionReference kullanicilarcollection = db.collection("kullanicilarcollection");
          Map<String, String> kullanici = new HashMap<>();
 
          kullanici.put("userId", user.getUid().toString());
@@ -215,6 +216,7 @@ public class hesapolustur extends AppCompatActivity {
         kullanici.put("DogumTarihi", dogumtarihi);
         kullanici.put("Okul", okul);
         kullanici.put("Bolum", bolum);
+        kullanicilarcollection.document("SF").set(kullanici);
 
 
         db.collection("kullanici")
