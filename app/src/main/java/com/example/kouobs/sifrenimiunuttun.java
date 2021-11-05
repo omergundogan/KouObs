@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+// şifremi unuttum için şifre yolla kontrol et
 
 public class sifrenimiunuttun extends AppCompatActivity {
 
@@ -20,6 +21,8 @@ public class sifrenimiunuttun extends AppCompatActivity {
         Button reset = (Button) findViewById(R.id.reset);
         EditText resetpassword = (EditText) findViewById(R.id.emailsignup);
         ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
+        //eklendi
+        TextView sifre = (TextView) findViewById(R.id.password);
 
         pb.setVisibility(View.INVISIBLE);
         afterText.setVisibility(View.INVISIBLE);

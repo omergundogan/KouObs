@@ -1,4 +1,5 @@
-<ScrollView android:layout_width="match_parent"
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/greenbackground"
@@ -10,16 +11,19 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
-            tools:layout_editor_absoluteY="466dp"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="56"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="86dp"
+            android:textSize="25dp"
             android:text="Hesap Oluştur"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateIds"
+            tools:layout_editor_absoluteY="466dp" />
+
 
         <EditText
             android:id="@+id/emailsignup"
@@ -131,7 +135,7 @@
             android:hint="Adres"
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
-            android:translationZ="1dp"/>
+            android:translationZ="1dp" />
 
         <EditText
             android:id="@+id/telefonno"
@@ -160,30 +164,59 @@
             android:layout_marginTop="840dp"
             android:background="@drawable/rounded_edittext"
             android:ems="10"
-            android:inputType="date"
             android:hint="Doğum Tarihi"
-            android:paddingLeft="20dp"
-            android:translationZ="1dp"
+            android:inputType="date"
             android:maxLength="10"
-            />
+            android:paddingLeft="20dp"
+            android:translationZ="1dp" />
 
+        <EditText
+            android:id="@+id/universitesi"
+            android:layout_width="275dp"
+            android:layout_height="54dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="920dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="Üniversitesi"
+            android:inputType="text"
+            android:maxLength="10"
+            android:paddingLeft="20dp"
+            android:translationZ="1dp" />
 
+        <EditText
+            android:id="@+id/bolumu"
+            android:layout_width="275dp"
+            android:layout_height="54dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="1000dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="Bölünmü"
+            android:inputType="text"
+            android:maxLength="10"
+            android:paddingLeft="20dp"
+            android:translationZ="1dp" />
 
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="560dp"
-            android:text="Hesap Oluştur"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="466dp" />
-
-
-
+        <Button
+            android:id="@+id/kayit"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Devam"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="1080dp"
+            android:ems="10"
+            android:paddingLeft="20dp"
+            android:translationZ="1dp" />
 
 
     </RelativeLayout>
