@@ -1,5 +1,6 @@
 package com.example.kouobs;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,12 +9,30 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.kouobs.ui.login.LoginActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class AnaSayfa extends AppCompatActivity {
 
 
-
-
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private CollectionReference debtref = db.collection("kullanici");
+    private String debtonoref = db.collection("kullanici").document().getPath();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +42,27 @@ public class AnaSayfa extends AppCompatActivity {
         Button pdf = (Button) findViewById(R.id.pdf);
 
         Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            String value = extras.getString("userId");
-            Log.d("getuserid",value);
-           uid.setText(value);
-        }
+
+            String userid = extras.getString("userId");
+            Log.d("getuserid",userid);
+
+
+        DocumentReference docRef = db.collection("kullanici").document(debtonoref);
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Log.d("sorgula", "DocumentSnapshot data: " + document.getData());
+                    } else {
+                        Log.d("sorgula", "No such document");
+                    }
+                } else {
+                    Log.d("sorgula", "get failed with ", task.getException());
+                }
+            }
+        });
 
         pdf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,4 +73,6 @@ public class AnaSayfa extends AppCompatActivity {
         });
 
     }
+
+
 }
