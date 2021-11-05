@@ -194,6 +194,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("giris", "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Log.d("uid", user.getUid().toString());
+                            //..
 
                             String currentUserId = user.getUid().toString();
                             Intent intent = new Intent(LoginActivity.this,AnaSayfa.class);
