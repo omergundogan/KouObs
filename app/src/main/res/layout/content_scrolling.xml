@@ -183,7 +183,6 @@
             android:ems="10"
             android:hint="Üniversitesi"
             android:inputType="text"
-            android:maxLength="10"
             android:paddingLeft="20dp"
             android:translationZ="1dp" />
 
@@ -200,7 +199,6 @@
             android:ems="10"
             android:hint="Bölünmü"
             android:inputType="text"
-            android:maxLength="10"
             android:paddingLeft="20dp"
             android:translationZ="1dp" />
 

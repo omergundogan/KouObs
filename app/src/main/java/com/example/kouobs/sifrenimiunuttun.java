@@ -29,8 +29,8 @@ public class sifrenimiunuttun extends AppCompatActivity {
         Button reset = (Button) findViewById(R.id.reset);
         EditText resetpassword = (EditText) findViewById(R.id.emailsignup);
         ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
-        //eklendi
-        TextView sifre = (TextView) findViewById(R.id.password);
+
+        TextView sifre = (TextView) findViewById(R.id.emailsignup);
 
         pb.setVisibility(View.INVISIBLE);
         afterText.setVisibility(View.INVISIBLE);
@@ -47,8 +47,10 @@ public class sifrenimiunuttun extends AppCompatActivity {
 
                  FirebaseAuth mAuth;
 
+                 String passord = sifre.getText().toString();
 
-                FirebaseAuth.getInstance().sendPasswordResetEmail(sifre.getText().toString())
+
+                FirebaseAuth.getInstance().sendPasswordResetEmail(passord)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
