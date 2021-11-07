@@ -198,14 +198,14 @@ public class LoginActivity extends AppCompatActivity {
 
                             String currentUserId = user.getUid().toString();
                             Intent intent = new Intent(LoginActivity.this,AnaSayfa.class);
-                            intent.putExtra("userId",currentUserId);
+                            intent.putExtra("userId",currentUserId); //diğer sayfada user ID'ye erişebilmek için
                             startActivity(intent);
                             finish();
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("giris", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, "Giriş Başarısız",
                                     Toast.LENGTH_SHORT).show();
 
                             finish();

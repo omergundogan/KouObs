@@ -32,7 +32,6 @@ public class AnaSayfa extends AppCompatActivity {
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference debtref = db.collection("kullanici");
-    private String debtonoref = db.collection("kullanici").document().getPath();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +48,7 @@ public class AnaSayfa extends AppCompatActivity {
             Log.d("getuserid",userid);
 
 
-        DocumentReference docRef = db.collection("kullanicilarcollection").document("SF");
+        DocumentReference docRef = db.collection("kullanicilarcollection").document(userid);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {

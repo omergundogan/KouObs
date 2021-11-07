@@ -85,11 +85,6 @@ public class hesapolustur extends AppCompatActivity {
         EditText bolumm = (EditText) findViewById(R.id.bolumu);
         Button devam = (Button) findViewById(R.id.kayit);
 
-        //arif enemesdfdf
-
-
-        //buray if koşulları eklenecek. Ör: şifreler eşit mi ? veya bütün inputlr dolu mu
-
 
 
 
@@ -216,7 +211,10 @@ public class hesapolustur extends AppCompatActivity {
         kullanici.put("DogumTarihi", dogumtarihi);
         kullanici.put("Okul", okul);
         kullanici.put("Bolum", bolum);
-        kullanicilarcollection.document("SF").set(kullanici);
+        kullanicilarcollection.document(user.getUid().toString()).set(kullanici); //ileride sorgu yapabiilmek için
+
+
+
 
 
         db.collection("kullanici")
@@ -248,6 +246,7 @@ private void dogrulama(String email,String sifre,String sifreTekrar, String ogre
                 !TextUtils.isEmpty(okul) && !TextUtils.isEmpty(bolum)  ){
 
             if(sifre.equals(sifreTekrar)) giris = true;
+
             else { Toast.makeText(hesapolustur.this, "Şifreler aynı değil",
                     Toast.LENGTH_SHORT).show();}
 
