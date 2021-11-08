@@ -211,8 +211,7 @@ public class hesapolustur extends AppCompatActivity {
         kullanici.put("DogumTarihi", dogumtarihi);
         kullanici.put("Okul", okul);
         kullanici.put("Bolum", bolum);
-        kullanicilarcollection.document(user.getUid().toString()).set(kullanici); //ileride sorgu yapabiilmek için
-
+        kullanicilarcollection.document("SF").set(kullanici);
 
 
 
@@ -246,7 +245,6 @@ private void dogrulama(String email,String sifre,String sifreTekrar, String ogre
                 !TextUtils.isEmpty(okul) && !TextUtils.isEmpty(bolum)  ){
 
             if(sifre.equals(sifreTekrar)) giris = true;
-
             else { Toast.makeText(hesapolustur.this, "Şifreler aynı değil",
                     Toast.LENGTH_SHORT).show();}
 

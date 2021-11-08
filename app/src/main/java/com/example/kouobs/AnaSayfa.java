@@ -41,6 +41,7 @@ public class AnaSayfa extends AppCompatActivity {
         TextView ogad = (TextView) findViewById(R.id.ogad);
         TextView ogsoyad = (TextView) findViewById(R.id.ogsoyad);
         Button pdf = (Button) findViewById(R.id.pdf);
+        Button cikis = (Button) findViewById(R.id.cikis);
 
         Bundle extras = getIntent().getExtras();
 
@@ -48,7 +49,11 @@ public class AnaSayfa extends AppCompatActivity {
             Log.d("getuserid",userid);
 
 
-        DocumentReference docRef = db.collection("kullanicilarcollection").document(userid);
+
+
+            //firebase collection'dan yapılan sorgu
+        DocumentReference docRef = db.collection("kullanicilarcollection").document("SF");
+
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -66,6 +71,14 @@ public class AnaSayfa extends AppCompatActivity {
                 } else {
                     Log.d("sorgula", "get failed with ", task.getException());
                 }
+            }
+        });
+
+        cikis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AnaSayfa.this,LoginActivity.class);
+                startActivity(intent);
             }
         });
 

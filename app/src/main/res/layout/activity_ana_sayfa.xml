@@ -10,9 +10,19 @@
         android:id="@+id/pdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yatay Geçiş Şartları"
         android:layout_marginStart="100dp"
         android:layout_marginTop="400dp"
+        android:text="Yatay Geçiş Şartları"
+
+        />
+
+    <Button
+        android:id="@+id/cikis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="650dp"
+        android:text="Çıkış Yap"
 
         />
 
